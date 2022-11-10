@@ -80,6 +80,11 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
+		
+		#if android
+		FlxG.android.preventDefaultKeys = [BACK];
+		#end
+			
 		var save:FlxSave = new FlxSave();
 		save.bind('avfnf', 'ninjamuffin99');
 		if(save.data.dud == null) {
@@ -88,7 +93,7 @@ class TitleState extends MusicBeatState
 		save.flush();
 		FlxG.log.add("Settings saved!");
 		#if sys
-		if (!sys.FileSystem.exists("assets/dud.png")) {
+		if (!HSys.exists("assets/dud.png")) {
 			var save:FlxSave = new FlxSave();
 			save.bind('avfnf', 'ninjamuffin99');
 			save.data.dud = true;
