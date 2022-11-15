@@ -1,5 +1,6 @@
 package;
 
+#if windows 
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
@@ -79,7 +80,7 @@ class MP4Handler2
 	function checkFile(fileName:String):String
 	{
 		var pDir = "";
-		var appDir = "file:///" + Main.path + "/";
+		var appDir = "file:///" + Sys.getCwd() + "/";
 
 		if (fileName.indexOf(":") == -1) // Not a path
 			pDir = appDir;
@@ -145,3 +146,4 @@ class MP4Handler2
 			bitmap.volume = 0;
 	}
 }
+#end
