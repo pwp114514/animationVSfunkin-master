@@ -170,4 +170,4 @@ class MP4Handler
 			bitmap.volume = 0;
 	}
 }
-#enx
+#end
