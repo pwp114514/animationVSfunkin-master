@@ -1641,7 +1641,7 @@ class PlayState extends MusicBeatState
 			luaArray.push(new FunkinLua(Paths.lua("data/" + Paths.formatToSongPath(SONG.song) + "/" + "script")));
 		#end
 	
-		if (isStoryMode && !seenCutscene)
+		/*if (isStoryMode && !seenCutscene)
 		{
 			switch (Paths.formatToSongPath(curSong))
 			{
@@ -1667,7 +1667,7 @@ class PlayState extends MusicBeatState
 		} else {
 			startCountdown();
 			creditthing();
-		}
+		}*/
 		RecalculateRating();
 
 		//PRECACHING MISS SOUNDS BECAUSE I THINK THEY CAN LAG PEOPLE AND FUCK THEM UP IDK HOW HAXE WORKS
