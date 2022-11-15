@@ -1,6 +1,7 @@
 import flixel.FlxG;
 import flixel.FlxSprite;
 
+#if windows 
 class CutsceneState extends MusicBeatState
 {
 	public var handler:MP4Handler;
@@ -38,3 +39,4 @@ class CutsceneState extends MusicBeatState
 		super.create();
 	}
 }
+#end
