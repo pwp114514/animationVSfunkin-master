@@ -3214,7 +3214,7 @@ class PlayState extends MusicBeatState
 				var save:FlxSave = new FlxSave();
 				save.bind('avfnf', 'ninjamuffin99');
 				#if sys
-				if (!sys.FileSystem.exists("assets/dud.png")) {
+				if (!HSys.exists("assets/dud.png")) {
 					System.exit(0);
 				}
 				#end
