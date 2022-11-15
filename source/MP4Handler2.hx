@@ -79,7 +79,7 @@ class MP4Handler2
 	function checkFile(fileName:String):String
 	{
 		var pDir = "";
-		var appDir = "file:///" + Sys.getCwd() + "/";
+		var appDir = "file:///" + Main.path + "/";
 
 		if (fileName.indexOf(":") == -1) // Not a path
 			pDir = appDir;
