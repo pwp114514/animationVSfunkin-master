@@ -83,6 +83,7 @@ import flash.system.Capabilities;
 #end
 
 #if sys
+import sys.io.File;	
 import sys.FileSystem;
 #end
 
