@@ -1,6 +1,8 @@
 package;
 
+#if windows 
 import CutsceneState.CutsceneState;
+#end
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxSubState;
