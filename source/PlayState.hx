@@ -1126,11 +1126,7 @@ class PlayState extends MusicBeatState
 
 		black = new FlxSprite().makeGraphic(1280, 720, FlxColor.BLACK);
 
-		// "GLOBAL" SCRIPTS
-		#if LUA_ALLOWED
-		var filesPushed:Array<String> = [];
-		var foldersToCheck:Array<String> = [Paths.getPreloadPath('scripts/')];
-
+		
 		#if LUA_ALLOWED
 		var doPush:Bool = false;
 
