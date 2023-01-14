@@ -1638,24 +1638,25 @@ class PlayState extends MusicBeatState
 			luaArray.push(new FunkinLua(Paths.lua("data/" + Paths.formatToSongPath(SONG.song) + "/" + "script")));
 		#end
 	
-		/*if (isStoryMode && !seenCutscene)
+		if (isStoryMode && !seenCutscene)
 		{
 			switch (Paths.formatToSongPath(curSong))
 			{
 				case "unwelcomed":
-					startMP4vid('cutscene_red');
+					LoadingState.loadAndSwitchState(new VideoState('assets/videos/cutscene_red', new PlayState())); 
 				case "mastermind":
-					startMP4vid('cutscene_blue');
+					LoadingState.loadAndSwitchState(new VideoState('assets/videos/cutscene_blue', new PlayState())); 
 				case "stickin-to-it":
-					startMP4vid('cutscene_green');
+					LoadingState.loadAndSwitchState(new VideoState('assets/videos/cutscene_green', new PlayState())); 
 				case "repeater":
-					startMP4vid('cutscene_yellow');
+					LoadingState.loadAndSwitchState(new VideoState('assets/videos/cutscene_yellow', new PlayState())); 
 				case "rock-blocks":
-					startMP4vid('cutscene_tsc');
+					LoadingState.loadAndSwitchState(new VideoState('assets/videos/cutscene_tsc', new PlayState())); 
 				case 'stick-symphony':
-					startMP4vid('BandCutscene');
+					LoadingState.loadAndSwitchState(new VideoState('assets/videos/BandCutscene', new PlayState())); 
 				case 'vengeance':
-					startVideo('makesomenoise_cut');
+					LoadingState.loadAndSwitchState(new VideoState('assets/videos/makesomenoise_cut', new PlayState())); 
+					
 				default:
 					startCountdown();
 					creditthing();
@@ -1664,7 +1665,7 @@ class PlayState extends MusicBeatState
 		} else {
 			startCountdown();
 			creditthing();
-		}*/
+		}
 		RecalculateRating();
 
 		//PRECACHING MISS SOUNDS BECAUSE I THINK THEY CAN LAG PEOPLE AND FUCK THEM UP IDK HOW HAXE WORKS
