@@ -108,6 +108,7 @@
 	<haxelib name="faxe" if='switch'/>
 	<!--<haxelib name="polymod"/> -->
 	<haxelib name="discord_rpc" if="desktop"/>
+	<haxelib name="extension-webview"/>
         <haxelib name="actuate" />
 	<!-- <haxelib name="hxcpp-debug-server" if="desktop"/> -->
 
