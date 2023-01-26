@@ -200,13 +200,8 @@ class Paths
 
 	static public function video(key:String)
 	{
-		#if MODS_ALLOWED
-		var file:String = modsVideo(key);
-		if(FileSystem.exists(file)) {
-			return file;
-		}
-		#end
-		return 'assets/videos/$key.$VIDEO_EXT';
+		
+		return 'assets/videos/$key';
 	}
 
 	static public function sound(key:String, ?library:String):Sound
