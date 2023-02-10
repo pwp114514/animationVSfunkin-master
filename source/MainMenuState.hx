@@ -292,7 +292,6 @@ class MainMenuState extends MusicBeatState
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
 
-		#if debug
 		if (FlxG.keys.justPressed.ONE)
 		{
 			FlxG.save.data.beatStickin =false;
@@ -320,7 +319,6 @@ class MainMenuState extends MusicBeatState
 			MusicBeatState.switchState(new CodeStateNew());
 		}
 		
-		#end
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
