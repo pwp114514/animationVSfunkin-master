@@ -1637,36 +1637,6 @@ class PlayState extends MusicBeatState
 		if(doPush) 
 			luaArray.push(new FunkinLua(Paths.lua("data/" + Paths.formatToSongPath(SONG.song) + "/" + "script")));
 		#end
-	
-		if (isStoryMode && !seenCutscene)
-		{
-			switch (Paths.formatToSongPath(curSong))
-			{
-				case "unwelcomed":
-					MusicBeatState.switchState(new VideoState('assets/videos/cutscene_red', new PlayState())); 
-				case "mastermind":
-					LoadingState.loadAndSwitchState(new VideoState('assets/videos/cutscene_blue', new PlayState())); 
-				case "stickin-to-it":
-					LoadingState.loadAndSwitchState(new VideoState('assets/videos/cutscene_green', new PlayState())); 
-				case "repeater":
-					LoadingState.loadAndSwitchState(new VideoState('assets/videos/cutscene_yellow', new PlayState())); 
-				case "rock-blocks":
-					LoadingState.loadAndSwitchState(new VideoState('assets/videos/cutscene_tsc', new PlayState())); 
-				case 'stick-symphony':
-					LoadingState.loadAndSwitchState(new VideoState('assets/videos/BandCutscene', new PlayState())); 
-				case 'vengeance':
-					LoadingState.loadAndSwitchState(new VideoState('assets/videos/makesomenoise_cut', new PlayState())); 
-					
-				default:
-					startCountdown();
-					creditthing();
-			}
-			seenCutscene = true;
-		} else {
-			startCountdown();
-			creditthing();
-		}
-		RecalculateRating();
 
 		//PRECACHING MISS SOUNDS BECAUSE I THINK THEY CAN LAG PEOPLE AND FUCK THEM UP IDK HOW HAXE WORKS
 		precacheList.set('missnote1', 'sound');
