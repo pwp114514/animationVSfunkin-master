@@ -308,7 +308,7 @@ class MainMenuState extends MusicBeatState
 			FlxG.save.flush();
 		}
 		
-		if (FlxG.keys.justPressed.K)
+		if (FlxG.keys.justPressed.K #if android || _virtualpad.buttonE.justPressed #end)
 		{
 			optionHandler = true;
 			MusicBeatState.switchState(new SongSelectionState());
